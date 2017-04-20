@@ -1,0 +1,45 @@
+package cont;
+
+import foo.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.ArrayList;
+
+// putanja http://localhost:8080/ch8-el/controller vodi do ovog servleta , vidi web.xml
+public class Controller extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	throws ServletException, IOException {
+		
+		Person p = new Person();
+		p.setName("Jelena");
+		
+		Dog d = new Dog();
+		d.setName("Lili");
+		
+		Toy t1 = new Toy();
+		t1.setName("stick");
+		Toy t2 = new Toy();
+		t2.setName("neighbor's cat");
+		Toy t3 = new Toy();
+		t3.setName("Barbie doll head");	
+		
+		d.setToys(new Toy[]{t1, t2, t3});
+		
+		p.setDog(d);
+		
+		request.setAttribute("person", p);		
+		
+		RequestDispatcher view = request.getRequestDispatcher("/view.jsp");		
+		view.forward(request, response);
+
+	}
+}
