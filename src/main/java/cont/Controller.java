@@ -36,7 +36,15 @@ public class Controller extends HttpServlet{
 		
 		p.setDog(d);
 		
-		request.setAttribute("person", p);		
+		request.setAttribute("person", p);	
+
+		PageContent pc = new PageContent();
+		pc.setCurrentTip("<b></b> make things bold.");
+		request.setAttribute("pageContent", pc);
+		
+		PageContent pc1 = new PageContent();
+		pc1.setCurrentTip("&lt;b&gt;&lt;/b&gt; make things bold.");
+		request.setAttribute("pageContent1", pc1);
 		
 		RequestDispatcher view = request.getRequestDispatcher("/view.jsp");		
 		view.forward(request, response);
