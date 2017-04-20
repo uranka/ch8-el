@@ -1,3 +1,4 @@
+<!-- do ovoga se dolazi direktnno sa forme-->
 <html><body>
 <h3>EL implicit object - param </h3>
 Request parameter name is : ${param.name} <br/>
@@ -25,4 +26,5 @@ a method property. </p>
 <h3>Printing the value of context init parameter</h3>
 <p>Instead of application.getInitParameter("mainEmail") we're using EL.</p>
 <p>Email is: ${initParam.mainEmail}</p>
+
 </body></html>
