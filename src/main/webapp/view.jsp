@@ -19,4 +19,4 @@ ${person.dog.name}'s toys are: ${person.dog.toys[0].name}, ${person.dog.toys[1].
 	${pageContent1.currentTip}<br/>
 </div>
 
-</html></body>
+</body></html>
