@@ -17,4 +17,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<url-pattern>/controller</url-pattern> 
 </servlet-mapping> 
 
+<context-param>
+	<param-name>mainEmail</param-name>
+	<param-value>jelena@wickedlysmart.com</param-value>
+</context-param>
+
 </web-app>

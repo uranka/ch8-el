@@ -21,4 +21,8 @@ Request scope is a map of request scope attributes. </p>
 pageContext. pageContext has a request object as its property, and request object has 
 a method property. </p>
 <p>Method is: ${pageContext.request.method}</p>
+
+<h3>Printing the value of context init parameter</h3>
+<p>Instead of application.getInitParameter("mainEmail") we're using EL.</p>
+<p>Email is: ${initParam.mainEmail}</p>
 </body></html>

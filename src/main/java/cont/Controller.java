@@ -46,6 +46,8 @@ public class Controller extends HttpServlet{
 		pc1.setCurrentTip("&lt;b&gt;&lt;/b&gt; make things bold.");
 		request.setAttribute("pageContent1", pc1);
 		
+		
+		
 		RequestDispatcher view = request.getRequestDispatcher("/view.jsp");		
 		view.forward(request, response);
 
