@@ -26,4 +26,7 @@ Container thinks that some is an attribute with string property, but Container n
 We can't use dot operator when attribute names have dot</p>
 <p>requestScope implicit object comes to the rescue: ${requestScope["some.string"]} </p>
 
+<h3>EL implicit object - sessionScope</h3>
+${sessionScope["sessionAttribute"]} 
+
 </body></html>

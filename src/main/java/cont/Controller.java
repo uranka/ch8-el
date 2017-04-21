@@ -49,6 +49,9 @@ public class Controller extends HttpServlet{
 		request.setAttribute("some.string", 
 		"This is some string set as attribute in request scope whose name contains dot which is not allowed for Java variables");		
 		
+		HttpSession session = request.getSession();
+		session.setAttribute("sessionAttribute", "This string is session attribute");
+		
 		RequestDispatcher view = request.getRequestDispatcher("/view.jsp");		
 		view.forward(request, response);
 
