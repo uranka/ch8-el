@@ -52,6 +52,8 @@ public class Controller extends HttpServlet{
 		HttpSession session = request.getSession();
 		session.setAttribute("sessionAttribute", "This string is session attribute");
 		
+				
+		
 		RequestDispatcher view = request.getRequestDispatcher("/view.jsp");		
 		view.forward(request, response);
 

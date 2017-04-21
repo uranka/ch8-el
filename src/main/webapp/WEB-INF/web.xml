@@ -7,14 +7,24 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
   <display-name>Archetype Created Web Application</display-name>
   
-   <servlet>
+<servlet>
 	<servlet-name>Controller</servlet-name>
 	<servlet-class>cont.Controller</servlet-class>
-	</servlet>
+</servlet>
 
 <servlet-mapping>
 	<servlet-name>Controller</servlet-name>
 	<url-pattern>/controller</url-pattern> 
+</servlet-mapping> 
+
+<servlet>
+	<servlet-name>MyCookie</servlet-name>
+	<servlet-class>cont.MyCookie</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>MyCookie</servlet-name>
+	<url-pattern>/mycookie</url-pattern> 
 </servlet-mapping> 
 
 <context-param>
