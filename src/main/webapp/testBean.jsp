@@ -1,4 +1,5 @@
-<!-- do ovoga se dolazi direktnno sa forme-->
+<!-- do ovoga se dolazi direktno sa forme-->
+<%@ taglib prefix="mine" uri="DiceFunctions" %>
 <html><body>
 <h3>EL implicit object - param </h3>
 Request parameter name is : ${param.name} <br/>
@@ -27,4 +28,6 @@ a method property. </p>
 <p>Instead of application.getInitParameter("mainEmail") we're using EL.</p>
 <p>Email is: ${initParam.mainEmail}</p>
 
+<h3>Testing EL functions</h3>
+Dice is thrown and you got the number: ${mine:rollIt()}
 </body></html>
